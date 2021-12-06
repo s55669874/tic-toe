@@ -637,7 +637,7 @@ int main()
                         Player *player = players;
                         while(player != NULL)
                         {
-                            if(player == socket_source)
+                            if(player->sockfd == socket_source)
                             {
                                  sprintf(buf, "Hello %s, here's your performance!\n"
                                             " win :  %d\n lose : %d"
