@@ -46,7 +46,7 @@ int main (int argc, char *argv[])
     printf( " (3) list  -- list online user\n");
     printf( " (4) invite {username} --Invite someone to play with you\n" );
     printf( " (5) performance --look your performance\n");
-    strcat( " (6) send {username} {message} --Send a message to other player \n");
+    printf( " (6) send {username} {message} --Send a message to other player \n");
     printf( " (7) logout \n\n");
 
 
