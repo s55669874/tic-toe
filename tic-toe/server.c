@@ -128,7 +128,7 @@ int main()
         //處理客戶需求
         for(i = 0 ; i < maxi ; i++)
         {
-            if(socket_source = client[i])
+            if((socket_source = client[i]) < 0)
                 continue;
             if(FD_ISSET(socket_source, &reads))
             {
