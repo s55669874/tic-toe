@@ -141,7 +141,7 @@ int main()
                     //create account
                     if(strcmp(arg1, "create") == 0)
                     {
-                        memsset(buf, '\0', BUFSIZE);
+                        memset(buf, '\0', BUFSIZE);
                         Player *temp;
                         temp = players;
                         Player *new_player = (Player *)malloc(sizeof(Player));
@@ -631,7 +631,7 @@ int main()
                         memset(buf, '\0', BUFSIZE);
                     }
                     //show my performance
-                    else if(strcmp(arg1, "performance" == 0))
+                    else if(strcmp(arg1, "performance") == 0)
                     {
                         memset(buf, '\0', BUFSIZE);
                         Player *player = players;
