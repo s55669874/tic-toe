@@ -267,6 +267,7 @@ int main()
                                     fprintf(stderr, "failed to find the source sockfd.\n");
                                     break;
                                 }
+                                break;
                             }
                         }
                         if(dest == NULL)
@@ -277,7 +278,7 @@ int main()
                         memset(buf, '\0', BUFSIZE);
                     }
                     //player accept invitation of a game
-                    else if(strcmp(arg1, "accept"))
+                    else if(strcmp(arg1, "accept") == 0)
                     {
                         memset(buf, '\0', BUFSIZE);
                         Player *src, *dest;
