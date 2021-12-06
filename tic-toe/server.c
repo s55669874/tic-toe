@@ -126,7 +126,7 @@ int main()
         } //if
 
         //處理客戶需求
-        for(i = 0 ; i < maxi ; i++)
+        for(i = 0 ; i <= maxi ; i++)
         {
             if((socket_source = client[i]) < 0)
                 continue;
