@@ -574,15 +574,14 @@ int main()
                                                                 , board->board[6], board->board[7], board->board[8]);
                                                 }
                                                 if(tie == 1)
-                                                strcat(buf, "\nNo one win this game!\n");
-                                                strcat(buf, "invite someone to play another game!\n");
-                                                strcat(buf, " Usage: \n (1) create {account} {password} -- Create the account \n");
-                                                strcat(buf, " (2) login {account} {password}  -- User login\n");
-                                                strcat(buf, " (3) list  -- list online user\n");
-                                                strcat(buf, " (4) invite {username} --Invite someone to play with you\n" );
-                                                strcat(buf, " (5) performance --look your performance\n");
-                                                strcat(buf, " (6) send {username} {message} --Send a message to other player \n");
-                                                strcat(buf, " (7) logout \n\n");
+                                                strcat(buf, "\n No one win this game!\n");
+                                                strcat(buf, " invite someone to play another game!\n");
+                                                strcat(buf, " Usage: \n create {account} {password} -- Create the account \n");
+                                                strcat(buf, " login {account} {password}  -- User login\n");
+                                                strcat(buf, " list  -- list online user\n");
+                                                strcat(buf, " invite {username} --Invite someone to play with you\n" );
+                                                strcat(buf, " performance --look your performance\n");
+                                                strcat(buf, " logout \n\n");
                                                 
                                                 send(src->sockfd, buf, sizeof(buf), 0);
                                                 send(dest->sockfd, buf, sizeof(buf), 0);
@@ -717,13 +716,12 @@ int main()
                     //print
                     else
                     {
-                        strcpy(buf, " Usage: \n (1) create {account} {password} -- Create the account \n");
-                        strcat(buf, " (2) login {account} {password}  -- User login\n");
-                        strcat(buf, " (3) list  -- list online user\n");
-                        strcat(buf, " (4) invite {username} --Invite someone to play with you\n" );
-                        strcat(buf, " (5) performance --look your performance\n");
-                        strcat(buf, " (6) send {username} {message} --Send a message to other player \n");
-                        strcat(buf, " (7) logout \n\n");
+                        strcpy(buf, " Usage: \n create {account} {password} -- Create the account \n");
+                        strcat(buf, " login {account} {password}  -- User login\n");
+                        strcat(buf, " list  -- list online user\n");
+                        strcat(buf, " invite {username} --Invite someone to play with you\n" );
+                        strcat(buf, " performance --look your performance\n");
+                        strcat(buf, " logout \n\n");
                         send(socket_source, buf, sizeof(buf), 0);
                         memset(buf, '\0', BUFSIZE);
                     }
