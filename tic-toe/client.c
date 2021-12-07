@@ -41,13 +41,12 @@ int main (int argc, char *argv[])
         exit(1);
     }
 
-    printf( " Usage: \n (1) create {account} {password} -- Create the account \n");
-    printf( " (2) login {account} {password}  -- User login\n");
-    printf( " (3) list  -- list online user\n");
-    printf( " (4) invite {username} --Invite someone to play with you\n" );
-    printf( " (5) performance --look your performance\n");
-    printf( " (6) send {username} {message} --Send a message to other player \n");
-    printf( " (7) logout \n\n");
+    printf( " Usage: \n create {account} {password} -- Create the account \n");
+    printf( " login {account} {password}  -- User login\n");
+    printf( " list  -- list online user\n");
+    printf( " invite {username} --Invite someone to play with you\n" );
+    printf( " performance --look your performance\n");
+    printf( " logout \n\n");
 
 
     /* deal with the message */
