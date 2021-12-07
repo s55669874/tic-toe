@@ -654,65 +654,6 @@ int main()
                         send(socket_source, buf, strlen(buf), 0);
                         memset(buf, '\0', BUFSIZE);
                     }
-                    else if(strcmp(arg1, "send") == 0)
-                    {
-                        memset("buf", '\0', BUFSIZE);
-                        Player *src, *dest;
-                        src = players;
-                        dest = players;
-                        if(arg2 == NULL)
-                        {
-                            strcpy(buf,"Usage:\n send {username} {message}\n");
-                            strcat(buf,"You miss the person who you want to send message!\n ");
-                            send(socket_source,buf,strlen(buf),0);
-                            memset(buf, '\0', BUFSIZE);
-                        }
-                        else
-                        {
-                            while (dest != NULL)
-                            {
-                                if (strcmp(dest->account, arg2) != 0)
-                                    dest = dest->next;
-                                else
-                                {
-                                    // get the source account
-                                    while (src != NULL)
-                                    {
-                                        if (socket_source != src->sockfd)
-                                            src = src->next;
-                                        else
-                                        {
-                                            if(arg3 == NULL)
-                                            {
-                                                strcpy(buf,"You don't type in any messages!!\n");
-                                                send(src->sockfd,buf,strlen(buf),0);
-                                                memset(buf, '\0', BUFSIZE);
-                                            }
-                                            else
-                                            {
-                                                strcpy(buf,src->account);
-                                                strcat(buf," : ");
-                                                strcat(buf,arg3);
-                                                strcat(buf,"\n");
-                                                send(dest->sockfd,buf,strlen(buf),0);
-                                                memset(buf,0,BUFSIZE);
-                                                strcpy(buf,"You : ");
-                                                strcat(buf,arg3);
-                                                strcat(buf,"\n");
-                                                send(src->sockfd,buf,strlen(buf),0);
-                                                memset(buf, '\0', BUFSIZE);
-                                                
-                                            }
-                                            break;
-                                        }
-                                    }
-                                    break;
-                                }
-                            
-                            }
-                        }
-
-                    }
                     //print
                     else
                     {
