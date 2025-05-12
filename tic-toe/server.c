@@ -31,8 +31,8 @@ int main()
     printf("Configuring local address...\n");
     struct addrinfo hints;
     memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_family = AF_INET;    //IPV4
+    hints.ai_socktype = SOCK_STREAM;   //TCP
     hints.ai_flags = AI_PASSIVE;
 
     struct addrinfo *bind_address;
@@ -46,7 +46,7 @@ int main()
         fprintf(stderr, "socket() failed. (%d)\n", GETSOCKETERRNO());
         return 1;
     }
-
+    //確保socket和指定的IP/port綁定
     printf("Binding socket to local address...\n");//使用select的前置設定
     if(bind(socket_listen, bind_address->ai_addr, bind_address->ai_addrlen))
     {
